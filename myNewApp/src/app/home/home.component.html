@@ -1,0 +1,26 @@
+<div id="one">
+    <div id="two">
+<p>home works!</p>
+<h1>NgFor group</h1>
+<h2>NgSwitch </h2>
+
+<ul>
+<li *ngFor="let item of peopleByCountry"[ngSwitch]="item.country"> 
+<span *ngSwitchCase="'UK'" class="text-info"> {{item.country}}   </span>
+<span *ngSwitchCase="'US'" class="text-success"> {{item.country}}   </span>
+<span *ngSwitchCase="'MARS'" class="text-danger"> {{item.country}}   </span>
+
+
+   
+        <ul>
+              <li *ngFor="let i of item.people">{{i.name}}</li>
+        </ul>
+
+</li>
+
+</ul>
+</div>
+<div id="three">
+    <app-aside></app-aside>
+</div>
+</div>

@@ -1,0 +1,10 @@
+ 
+<h1>Lis Pro</h1>
+<div class="col col-md-4" style="float: left;">
+<app-product-card [product]="product" *ngFor="let product of products" (getfavProduct)="print($event)"></app-product-card> 
+</div>
+
+
+<div class="col col-md-6" style="float: right; ">
+<app-favorite-product  [favoriteproducts]="favoriteProducts" ></app-favorite-product>
+</div>

@@ -1,0 +1,27 @@
+<p>users works!</p>
+<form #loginform="ngForm" (ngSubmit)="onSubmit()">
+<div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" [(ngModel)]="user.username" #username="ngModel" required minlength="3"
+    placeholder="Ahmed mohamed" name="username">
+    <span class="text-danger" [hidden]="username.valid ||username.pristine">Error enter valid name</span>
+    <span class="text-danger" [hidden]="!username?.errors?.['required']"> required</span>
+      <span class="text-danger" [hidden]="!username?.errors?.['minlength']"> currente length is must more than
+        {{username?.errors?.['minlength']['actualLength']}}</span>
+    <label for="floatingInput">UserName</label>
+  </div> 
+  <div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="user.password" required #password="ngModel" minlength="4"
+    placeholder="Password" name="password">
+    <span class="text-danger"[hidden]="password.valid ||password.pristine" ></span>
+    <span class="text-danger" [hidden]="!password?.errors?.['required']"> required</span>
+    <span class="text-danger" [hidden]="!password?.errors?.['minlength']"> currente length is must more than
+        {{password?.errors?.['minlength']['actualLength']}}</span>
+
+    <label for="floatingPassword">Password</label>
+  </div> 
+<br>
+  <input type="submit" value="Login" [disabled]="loginform.invalid">    
+  <!-- {{loginform.status}} -->
+</form>
+
+ 

@@ -1,0 +1,21 @@
+#one{
+border: 1px solid black;
+margin-bottom: 5px;
+height: 500px;
+ 
+}
+#two{
+    border: 1px solid black;
+    width: 800px;
+    height: inherit;
+    float: left;
+    clear: right;
+}
+#three
+{
+    border: 1px solid black;
+   height: 500px;
+clear: right;
+ 
+
+}

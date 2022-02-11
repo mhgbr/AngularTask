@@ -1,0 +1,33 @@
+<p>products works!</p>
+
+<form [formGroup] = "productform">
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput"    formControlName="title" required minlength="3"
+        placeholder="Ahmed mohamed" name="title">
+        <span class="text-danger" [hidden]="title.valid || title.pristine">required</span>
+        <label for="floatingInput">title</label>
+      </div> 
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" formControlName="description" minlength="5" required
+        placeholder="text" name="description">
+        <span class="text-danger" [hidden]="description.valid || description.pristine"> required</span>
+
+        <label for="floatingPassword">description</label>
+      </div> 
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" formControlName="image" minlength="4" required
+        placeholder="text" name="image">
+        <span class="text-danger" [hidden]="image.valid || image.pristine">required</span>
+
+        <label for="floatingPassword">image</label>
+      </div> 
+    <br>
+      <input type="button" value="Add" [disabled]="productform.invalid" (click)=" Addproduct(productform.value)" [routerLink]="'/list'"> 
+
+
+
+
+
+
+</form>

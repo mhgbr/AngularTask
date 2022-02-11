@@ -1,0 +1,26 @@
+ 
+<p>content works!</p>
+
+<div id="mydiv">
+
+
+<input type="text"  placeholder="Enter new todos" #username (keyup.enter)="adduser(username.value)">
+<input type="button" value="Add" (click)="adduser(username.value)"> <br><br>
+<span  >Todo List</span>
+<input type="text"  placeholder=" Filter" #f (input)="search(f.value)"   >
+<br><br>
+ 
+<div class="d-grid gap-3">
+    <ul class="p-2 bg-light border" 
+            *ngFor="let user of users2">{{user}}
+                <input type="button" value="Delete" style="float: right;" class="btn btn-danger"  (click)=" delete(username.value)">       
+         
+    </ul> 
+
+     
+  </div>
+
+ 
+
+ 
+  
